@@ -1,6 +1,8 @@
 # Batch processing with python
 
-This program is to read all files in a folder and insert it into table
+Goal : To compile all files in folder source and insert it into single table in postgresql
 
-1. First we create a table with create_table.py
-2. Second we read all files within the data and insert it into table with insert_table.py
+The process :
+1. We have 4 files in folder source
+2. We create a table in postgresql with create_table.py
+2. Then We will read all files in folder source within the data, and insert it into table with insert_table.py

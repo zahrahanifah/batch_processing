@@ -7,12 +7,13 @@ cur = conn.cursor()
 #create table
 cur.execute("""
                 CREATE TABLE IF NOT EXISTS all_ticket(
-                    file_name text,
-                    date_insert date,
+                    no_ticket text PRIMARY KEY,
                     title text,
                     body text,
                     created_on date,
-                    ticket_status text
+                    ticket_status text,
+                    file_name text,
+                    date_insert date
                 )
 
 """

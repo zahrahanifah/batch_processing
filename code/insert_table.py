@@ -20,7 +20,7 @@ for file in folder:
     current_time = datetime.now()
 
     for index, row in df.iterrows():
-        cur.execute("INSERT INTO all_ticket VALUES (%s, %s, %s, %s, %s, %s)",(filename, current_time, row['title'], row['body'], row['created_on'], row['ticket_status']))
+        cur.execute("INSERT INTO all_ticket VALUES (%s, %s, %s, %s, %s, %s, %s) on conflict do nothing",(row['no_ticket'], row['title'], row['body'], row['created_on'], row['ticket_status'], filename, current_time))
     
 conn.commit()
 

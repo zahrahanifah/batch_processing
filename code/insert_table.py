@@ -12,7 +12,7 @@ cur = conn.cursor()
 path = os.getcwd()
 folder = glob.glob(os.path.join("E:/Zahra - Data Bootcamp/batch_processing/source", "*.csv"))
 
-#create query to insert multiple python variable in sql
+#read file in folder by doing iteration and insert the data into table
 for file in folder:
     df= pd.read_csv(file,sep=";")
            
